@@ -1,0 +1,31 @@
+public class LeetCode48 {
+    public void rotate(int[][] matrix) {
+        //transpose of the array
+        for(int i=0;i<matrix.length;i++){
+            for(int j=i;j<matrix[i].length;j++){
+                int t1=matrix[i][j];
+                matrix[i][j]=matrix[j][i];
+                matrix[j][i]=t1;
+            }
+        }
+
+        //swapping of the columns of the array
+        for(int i=0;i<matrix.length;i++){
+            int li=0;
+            int ri=matrix[i].length-1;
+            while(li<ri){
+                int t2=matrix[i][li];
+                matrix[i][li]=matrix[i][ri];
+                matrix[i][ri]=t2;
+                li++;
+                ri--;
+            }
+        }
+
+        for(int i=0;i<matrix.length;i++){
+            for(int j=0;j<matrix[i].length;j++){
+                System.out.println(matrix[i][j]);
+            }
+        }
+    }
+}
