@@ -1,0 +1,22 @@
+There are two ways to concatenate two strings in java:
+i)’+’ operator
+Eg:-
+String s1= “PW”;
+String s2 = “PW”+”Java”;
+System.out.println(s1);
+System.out.println(s2);
+
+Output:-
+PW
+PWJava
+
+ii)String.concat() method
+Eg:-
+String s1 = new String(“PW”);
+System.out.println(s1);
+s1 = s1.concat(“Java”);
+System.out.println(s1);
+
+Output:-
+PW
+PWJava
